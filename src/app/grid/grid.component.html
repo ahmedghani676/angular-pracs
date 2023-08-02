@@ -1,0 +1,27 @@
+<p>grid works!</p>
+<table class="table">
+
+    <tr>
+      <th>Title</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>dob</th>
+      <th>email</th>
+      <th>password</th>
+      <th>confirmPassword</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+        
+      <td>{{todo.title}}</td>
+      <td>{{todo.firstName}}</td>
+      <td>{{todo.lastName}}</td>
+      <td>{{todo.dob}}</td>
+      <td>{{todo.email}}</td>
+      <td>{{todo.password}}</td>
+      <td>{{todo.confirmPassword}}</td>
+      <td>
+        <button (click)="deleteTodo(todo)"> Delete</button>
+        <button (click)="UpdateTodo(todo)"> Update</button>
+      </td>
+    </tr>
+  </table>
